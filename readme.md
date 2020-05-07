@@ -43,7 +43,9 @@ output sample :
 
 # todo
 
-- fix/improve display
+- fix/improve display based on term size
+- algo rework (merge zgreps)
+- cut command line on the 1st line and print on 2nd line
 - generate html output
 - store in database, or create prometheus adapter (and tag system, in comments at the end on cronjob line) ?
 - handle input cron logs ? (real time storage)

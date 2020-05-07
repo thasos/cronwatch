@@ -62,7 +62,6 @@ Example :
 function checkFilesRights() {
     [[ ! -f "$logfile" ]] && echo "error : file $logfile not found" && exit 255
     $debug && echo -n "debug: logfile $logfile exists : " && ls -l "$logfile"
-    # TODO check, limit filesize ?
     if [[ ! -r "$logfile" ]]
     then
         # sudo proposal
@@ -82,8 +81,6 @@ function checkFilesRights() {
 function rawFilterLogs() {
     # TODO remove tail
     allLogs="$($sudo zgrep " CRON" "$logfile" | tail -100)"
-
-    # TODO parse before filter ?
 
     # filterTerm filtering
     if [ "$filterTerm" != "all" ]
@@ -144,7 +141,6 @@ function parseLogs() {
     # shellcheck disable=SC1079
 
     # logs loop
-    # TODO rework algo to merge zgreps
     while read -r line
     do
         # data split
@@ -203,7 +199,6 @@ function parseLogs() {
         fi
  
         # spaces are importants
-        # TODO cut cmd line with terminal size, and print the rest in 2nd line
         logsToStatus="${logsToStatus}  $jobPID1Formatted   $jobUserFormatted   $jobStatus   started $jobStartDate   $jobDurationLine1   $jobCommandLine\n"
         logsToStatus="${logsToStatus}                             ended $jobEndDate   $jobDurationLine2\n"
         logsToStatus="${logsToStatus}\\e[0m\n"
