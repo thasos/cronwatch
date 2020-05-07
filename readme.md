@@ -44,6 +44,7 @@ output sample :
 # todo
 
 - fix/improve display based on term size
+- error/warn if cron loglevel is not set
 - ability multiples files
 - algo rework (merge zgreps)
 - cut command line on the 1st line and print on 2nd line
