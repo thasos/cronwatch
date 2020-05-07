@@ -79,8 +79,7 @@ function checkFilesRights() {
 }
 
 function rawFilterLogs() {
-    # TODO remove tail
-    allLogs="$($sudo zgrep " CRON" "$logfile" | tail -100)"
+    allLogs="$($sudo zgrep " CRON" "$logfile")"
 
     # filterTerm filtering
     if [ "$filterTerm" != "all" ]
