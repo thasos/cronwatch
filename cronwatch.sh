@@ -11,7 +11,7 @@ function setDefaultVars() {
 function parseArgs() {
     usage="Usage : $0 -f [logfile] -F [filter_term] -s [status]
 Options :
-    -f, --file                      logfile to parse (can be several)
+    -f, --file                      logfile to parse
     -0, --ok                        (not implemented yet) filter failed cronjobs
     -1, --ko                        (not implemented yet) filter successfull cronjobs
     -F, --filter                    filter (user, pid, command...) specific cronjobs

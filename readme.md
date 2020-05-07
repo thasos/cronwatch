@@ -22,7 +22,7 @@ copy the script `cronwatch.sh` in `/usr/local/bin` (or where you want) : `sudo c
 ```
 Usage : cronwatch -f [logfile] -F [filter_term] -s [status]
 Options :
-    -f, --file                      logfile to parse (can be several)
+    -f, --file                      logfile to parse
     -0, --ok                        (not implemented yet) filter failed cronjobs
     -1, --ko                        (not implemented yet) filter successfull cronjobs
     -F, --filter                    filter (grep) specific cronjobs
@@ -44,6 +44,7 @@ output sample :
 # todo
 
 - fix/improve display based on term size
+- ability multiples files
 - algo rework (merge zgreps)
 - cut command line on the 1st line and print on 2nd line
 - generate html output
